@@ -1,0 +1,63 @@
+let bolinhaX, bolinhaY;
+//abreviação velocidade bolinhal
+let velbolX, velbolY;
+//abreviação raquetes
+let raq1Y, raq2Y;
+//abreviação altura da raquete
+const raqAlt=80;
+//abreviação largura da raquete
+const raqLar=10;
+//abreviação tamanho da bolinha
+const tamBol=10;
+//abreviação multiplicador de velocidade 
+const multiVe= 1.1;
+//abreviação Pontuaçãõ jogador 1
+let PontJog1=0;
+//abreviação Pontuação jogador 1
+let PontJog2=0;
+
+ function setup() {
+creareCanvas(800,400);
+bolinhaX=width /2;
+bolinhaY=height /2;
+velbolX=5;
+velbolY=5;
+raq1Y=height /2- raqAlt/2;
+raq2Y=height /2- raqAlt /2;
+ }
+function draw()
+{ background(0);
+//Desenhar a mesa dde ping pong
+ fill(255);
+ rect(whidt-raqLar-raqAlt);
+ rect(10, raq2Y,raqLar, raqAlt);
+ bolinhaX += velbolX;
+ bolinhaY += velbolY;
+if (bolinha + tamBol/2>=width-raqLar - 10 && bolinhaY + tamBol/2>= raq1Y
+&& bolinhaY - tamBol /2<= raqAlt { if (velbolX >0){ velbolX*= -multiVel;
+velbolY = calculatevelbolY (raq1Y, bolinhaY)}}
+
+if( bolinhaX - tamBol/2 <= raqLar+10 && bolinhaY+ tarnBol/2 >=raq2Y &&
+bolinhaY- tamBol/ 2<= raq2Y + raqAlt {if(velbolX <0) { velbolX *=-multiVel;
+velbolY = calculatevelbolY(raq2Y,bolinhaY);}}
+if (bolinhaY < tamBol/2 || bolinhaY > height- tamBol/2) {velbolY *=-1;}
+if (bolinhaX <0) { PontJog2 ++ resetBall();}
+if (bolinhaX > Width) {PontJog1 ++; resetBall();}
+
+fill (255);
+ellipse(bolinhaX, bolinhaY, tamBol);
+
+                     
+
+
+
+
+
+                                                      
+                                                      
+                                                      
+                                                      
+                                                      
+                                                      
+                                                      
+   
